@@ -3,19 +3,23 @@ const mongoose = require('mongoose')
 const ToolSchema = new mongoose.Schema({
 	title: {
 		type: String,
-		require: true
+		required: true
 	},
 	link: {
 		type: String,
-		require: true
+		required: true
 	},
 	description: {
 		type: String,
-		require: true
+		required: true
 	},
 	tags: {
 		type: [String],
-		require: true
+		required: true
+	},
+	createdAt: {
+			type: Date,
+			default: Date.now()
 	}
 })
 

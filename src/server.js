@@ -5,11 +5,17 @@ class App {
 		this.express = express()
 
 		this.middlewares()
+		this.database()
 		this.routes()
 	}
 
 	middlewares () {
 		this.express.use(express.json())
+	}
+
+	database() {
+		// connect to DB
+		require('./config/database')()
 	}
 
 	routes() {
