@@ -14,7 +14,7 @@ const ToolSchema = new mongoose.Schema({
 		require: true
 	},
 	tags: {
-		type: Array,
+		type: [String],
 		require: true
 	}
 })
