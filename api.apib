@@ -38,14 +38,20 @@ In this API you can create tools, search by title or tag, and delete tools.
 + Response 200 (application/json)
     + Attributes (array[Tool])
 
-## See tools [/tools/{id_tool}]
+## See tools [/tools/{id}]
 
 ### Show Tool [GET]
+
++ Parameters
+    + id (string, required) - Id of tool
 
 + Response 200 (application/json)
     + Attributes (Tool)
 
 ### Remove Tool [DELETE]
+
++ Parameters
+    + id (string, required) - Id of tool
 
 + Response 200 (application/json)
     + Attributes (object)
@@ -59,7 +65,7 @@ In this API you can create tools, search by title or tag, and delete tools.
 + title (string, required) - Title of tool
 + link (string, required) - Link of tool
 + description (string, required) - Description of tool
-+ tags (array) - Tags of tool
++ tags (array, optional) - Tags of tool
 
 ## Error (object)
 + code: 400 (number) - Status code
