@@ -1,0 +1,67 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# Simple API for creating tools
+
+In this API you can create tools, search by title or tag, and delete tools.
+
+# Group API
+
+## Tools [/tools]
+
+### Create tools [POST]
+
++ Request Create a tool
+
+    + Headers
+
+            Accept: application/json
+            Content-Type: application/json
+    + Attributes (Tool)
+
++ Response 200 (application/json)
+    + Attributes (Tool)
+
+### List tools [GET]
+
++ Response 200 (application/json)
+    + Attributes (array[Tool])
+
+## Search tools [/tools{?title}{?tag}]
+
+### Retrieve tools [GET]
+
++ Parameters
+    + title (string, optional) - Title of tool
+    + tag (string, optional) - Tag of tool
+
++ Response 200 (application/json)
+    + Attributes (array[Tool])
+
+## See tools [/tools/{id_tool}]
+
+### Show Tool [GET]
+
++ Response 200 (application/json)
+    + Attributes (Tool)
+
+### Remove Tool [DELETE]
+
++ Response 200 (application/json)
+    + Attributes (object)
+
++ Response 400 (application/json)
+    + Attributes (Error)
+
+# Data Structures
+
+## Tool (object)
++ title (string, required) - Title of tool
++ link (string, required) - Link of tool
++ description (string, required) - Description of tool
++ tags (array) - Tags of tool
+
+## Error (object)
++ code: 400 (number) - Status code
++ message (string) - Message of status
++ description (string) - Description of status
