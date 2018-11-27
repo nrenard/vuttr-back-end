@@ -1,20 +1,26 @@
 {
-  "name": "vuttr-back-end",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/nrenard/vuttr-back-end.git",
-  "author": "Nicolas <nicolasrenard1999@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.4",
-    "mongoose": "^5.3.13"
-  },
-  "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
-  },
-  "scripts": {
-    "start": "node src/index.js"
-  }
+	"name": "vuttr-back-end",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/nrenard/vuttr-back-end.git",
+	"author": "Nicolas <nicolasrenard1999@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.16.4",
+		"mongoose": "^5.3.13"
+	},
+	"devDependencies": {
+		"eslint": "^5.9.0",
+		"eslint-config-airbnb-base": "^13.1.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-node": "^8.0.0",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"nodemon": "^1.18.6"
+	},
+	"scripts": {
+		"start": "nodemon src/index.js"
+	}
 }
