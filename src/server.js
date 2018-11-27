@@ -1,5 +1,8 @@
+require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
+const mongoose = require('mongoose')
 
 class App {
   constructor () {
@@ -16,8 +19,13 @@ class App {
   }
 
   database () {
-    // connect to DB
-    require('./config/database')()
+		mongoose.connect(
+			process.env.DB_URL,
+      {
+        useCreateIndex: true,
+        useNewUrlParser: true
+      }
+		)
   }
 
   routes () {
