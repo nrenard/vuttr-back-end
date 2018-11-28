@@ -1,5 +1,6 @@
 const server = require('./server')
 
-const port = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
+const HOST = '0.0.0.0'
 
-server.listen(port)
+server.listen(PORT, HOST)
